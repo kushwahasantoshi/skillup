@@ -1,0 +1,22 @@
+{% comment %} {% include "header.html" %}
+
+<main>
+    {% block content%}
+
+    {% endblock %}
+
+</main>
+{% include "footer.html"%} {% endcomment %}
+
+
+
+{% include "header.html" %}
+
+<body>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+{% include "footer.html" %}
