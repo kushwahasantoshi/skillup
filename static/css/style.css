@@ -1,0 +1,423 @@
+*{
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+body
+{
+  min-height: 100vh;
+  min-width: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+  box-sizing: inherit;
+}
+
+html
+{
+  height: 100%;
+}
+
+.main-logo-img
+{
+    width: 100%;
+    max-width: 30%;
+}
+
+.top-nav
+{
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  box-shadow: -5px 9px 10px;
+}
+.navbar 
+{
+  background-color: black;
+}
+
+.top-nav .navbar-light .navbar-nav .nav-link 
+{
+  color: white !important;
+}
+
+.top-nav .nav-item.top-nav-item:hover 
+{
+  background: black;
+  color: black !important;
+  font-weight: 700;
+  box-shadow: 0px 0px 3px 3px darkgrey;
+  border-radius: 5px;
+  animation: nav-link-hover 2s 1s;
+}
+
+
+/*===========  */
+
+
+/*===========  Middle section CSS ==================*/ 
+
+.top-header 
+{
+  background-image: url("/static/images/main-bg-img.svg");   
+  background-color:whitesmoke;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  padding: 150px 50px;
+}
+
+.top-header h1
+{
+  font-weight: 700;
+    font-size: 75px;
+    color: black;
+    margin-top: 100px;
+}
+
+.top-header .top-header-right img 
+{
+  margin-top: 113px;
+  box-shadow: -33px -30px 0px;
+  border-radius: 92px 0;
+}
+
+.btn.btn-dark.start-btn 
+{
+  font-weight: 700px;
+  padding: 12px 30px;
+  border-radius: 30px;
+}
+
+.btn.btn-dark.start-btn:hover 
+{
+  background: white;
+  color: black;
+  font-weight: 700;
+}
+
+/*========== Home-about us CSS ============= */
+
+.home-about-us 
+{
+  padding: 60px;
+  background: white;
+}
+
+.home-about-us  .about-us-content 
+{
+  margin: 65px 0;
+}
+
+.home-about-us  .row.about-us-content p
+{
+  text-align: justify;
+}
+
+.home-about-us  .row.about-us-content img 
+{
+  width: 100%;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/*===== buttons and underlines CSSS =======*/
+
+a.load-button 
+{
+  color: #FCD75F;
+  text-decoration: none;
+}
+
+.underline 
+{
+  display: block;
+  width: 132px;
+  height: 2px;
+  background: #FCD75F;
+  margin-bottom: 30px;
+}
+/*===== buttons and underlines CSSS end =======*/
+
+/*================ animations ====================*/
+
+.contact-detail {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-detail.visible 
+{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.grow
+{
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: scrolright 1s ease-out forwards; 
+}
+
+@keyframes scrolright 
+{
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-500%); 
+  }
+}
+
+/*=========== animations end =====================*/
+
+.feedback
+{
+  margin: 0;
+  padding: 60px 0 100px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.feedback h2
+{
+  color: #FCD75F;
+}
+
+.card-list .card-item
+{
+  width: 376px;
+  padding: 27px;
+  margin-top: 50px;
+  border-radius: 8px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(30px);
+  color: #fff;
+  background: rgba(255,255, 255, 0.2);
+  border: 1px solid rgba(255,255, 255, 0.5);
+}
+.card-list .card-item .user-image
+{
+  width: 150px;
+  height: 150px;
+  border-radius: 90px;
+  margin-bottom: 40px;
+  border: 3px solid #fff;
+  padding: 4px;
+}
+.card-list .card-item .user-review
+{
+  text-align: justify;
+}
+
+.card-list .card-item .user-review
+{
+  margin: 14px 0 40px;
+}
+
+
+/*=========== Our vision =====================*/
+
+.our-vision 
+{
+  background: floralwhite;
+  padding: 50px 0;
+  text-align: justify;
+}
+
+.our-mission 
+{
+  padding: 50px 0;
+  text-align: justify;
+}
+
+.contact-us 
+{
+  background: #FCD75F;
+  padding: 94px 0;
+  display: inline-block;
+  width: 100%;
+  /* position: relative; */
+}
+
+.contact-us .contact-detail 
+{
+    width: 100%;
+    max-width: 33%;
+    left: 106px;
+    position: absolute;
+    z-index: 10;
+    background: #FCD75F;
+    padding: 134px 20px 30px 40px;
+    box-shadow: 0px 0px 20px 0px;
+    height: 500px;
+    border-radius: 12px;
+}
+
+.contact-us .contact-detail h6 
+{
+  line-height: 48px;
+}
+
+.contact-us .contact-detail i
+{
+  margin-right: 15px;
+}
+
+.contact-us .contact-form 
+{
+  width: 100%;
+  max-width: 60%;
+  background: white;
+  padding: 49px 15px 49px 76px;
+  border-radius: 20px;
+  margin: 60px 0;
+  float: right;
+  left: 39%;
+}
+
+
+/*========== FOOTER CSS ==============*/
+
+section.bottom 
+{
+  background: black;
+  padding: 50px;
+  color: #FCD75F;
+}
+
+section.bottom h5
+{
+  margin-bottom: 10px;
+}
+
+.footer-line 
+{
+  width: 100%; 
+  height: 1px;
+  margin: 0 auto 10px auto; 
+  background-color: #ccc;
+  margin-bottom: 57px;
+}
+
+.footer-links i
+{
+  color: #FCD75F;
+
+}
+.bottom .footer-links label 
+{
+  margin-right: 24px;
+  float: right;
+}
+
+/*===================== Login Page CSS ======================*/
+
+.login-form 
+{
+  padding: 100px;
+  background-image: url(/static/images/main-bg-img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn.btn-danger.login-btn 
+{
+    margin-top: 20px;
+    background: black;
+    border: black;
+}
+
+.btn.btn-danger.login-btn:hover
+{
+  background-color: rgb(57, 56, 56);
+}
+
+ .login-form .card
+ {
+    background-color: #00000042;
+    border: 2px solid;
+    border-radius: 9px;
+    padding: 12px;
+    color: black;
+ }
+
+/*============== Registration Page CSS ================*/
+.registration-form
+{
+  padding: 100px;
+  background-image: url(/static/images/main-bg-img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+.registration-form .card
+ {
+    background-color: #00000042;
+    border: 2px solid;
+    border-radius: 9px;
+    padding: 12px;
+    color: black;
+ }
+
+ .registration-form .card
+ {
+    background-color: #00000042;
+    border: 2px solid;
+    border-radius: 9px;
+    padding: 12px;
+    color: black;
+ }
+
+
+/*============ About US page CSS ================ */
+.about-us-page
+{
+  padding: 80px 0;
+}
+.about-us-page .aboutus-header 
+{
+    background-image: url(/static/images/aboutus.jpg);
+    width: 100%;
+    height: 100vh; 
+    background-position: center;
+    background-size: cover;
+}
+
+
+.about-us-page .aboutus-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000c4;
+  background-size: inherit;
+  background-position: inherit;
+  z-index: 1;
+}
+p
+.aboutus-main-heading 
+{
+  color: #f0bf1c;
+  z-index: 50;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.aboutus-main-heading h1 p
+{
+  font-size: large;
+}
