@@ -1,0 +1,23 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Django
+db.sqlite3
+media/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Static files
+staticfiles/
+
+# Ignore .git folder itself
+.git/

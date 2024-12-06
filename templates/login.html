@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="middle">
+    {% comment %} <div class="login-page">
+        <form>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+        </form>
+    </div> {% endcomment %}
+
+<div class="login-form">
+    <h1 class="text-center">Login Form</h1>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="loginForm" action="userlogin" method="POST">
+                            <div class="form-group">
+                                <label for="email"> Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" required />
+                             </div>
+                            <div class="form-group">
+                                <label for="userType" style="margin-top:10px"> User Type</label>
+                                <input type="text" class="form-control" id="userType" placeholder="Ex.. Student" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="password" style="margin-top:10px"> Password</label>
+                                <input type="password" class="form-control"id="password" placeholder="Password" required />
+                            </div>
+                            <button class="btn btn-danger login-btn"> Login </button>
+                        </form>
+                        <p class="mt-3">Not registered?
+                            <a href="/register/">Create an account</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+{% endblock  %}
