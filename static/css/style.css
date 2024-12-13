@@ -28,9 +28,10 @@ html
 {
   position: fixed;
   width: 100%;
-  z-index: 50;
   box-shadow: -5px 9px 10px;
+  z-index: 1000;
 }
+
 .navbar 
 {
   background-color: black;
@@ -51,6 +52,14 @@ html
   animation: nav-link-hover 2s 1s;
 }
 
+.top-nav .nav-item.top-nav-item .active
+{
+  background: black;
+  font-weight: 700;
+  box-shadow: 0px 0px 3px 3px darkgrey;
+  border-radius: 5px;
+  animation: nav-link-hover 2s 1s;
+}
 
 /*===========  */
 
@@ -226,7 +235,6 @@ a.load-button
   margin: 14px 0 40px;
 }
 
-
 /*=========== Our vision =====================*/
 
 .our-vision 
@@ -286,8 +294,6 @@ a.load-button
   float: right;
   left: 39%;
 }
-
-
 /*========== FOOTER CSS ==============*/
 
 section.bottom 
@@ -382,10 +388,7 @@ section.bottom h5
 
 
 /*============ About US page CSS ================ */
-.about-us-page
-{
-  padding: 80px 0;
-}
+
 .about-us-page .aboutus-header 
 {
     background-image: url(/static/images/aboutus.jpg);
@@ -408,16 +411,65 @@ section.bottom h5
   background-position: inherit;
   z-index: 1;
 }
-p
+
 .aboutus-main-heading 
 {
-  color: #f0bf1c;
+  color: #dbaa07;
   z-index: 50;
   padding: 100px 0;
   text-align: center;
 }
 
-.aboutus-main-heading h1 p
+.aboutus-main-heading h1
 {
-  font-size: large;
+  font-size: 100px;
+}
+
+.why-skillup
+{
+  padding: 100px 50px;  
+}
+
+.why-skillup .card
+{
+  border-radius: 20px;  
+  border: 2px solid black;
+}
+
+.why-skillup .card-img 
+{
+  content: '';
+  width: 100%;
+  display: inline-block;
+  max-width: 100%;
+  height: 100%;
+  background: #dbaa07;
+  border-radius: 16px 0 0 16px;
+}
+
+.why-skillup .card-content 
+{
+  width: 100%;
+  max-width: 100%;
+  margin-top: 11px;
+}
+
+.our-team
+{
+  background: #a9a9a93d;
+  padding: 100px 50px;
+}
+
+.our-team .card-list .card-item
+{
+  color: white;
+  background: black;
+}
+.our-team .card-list .card-item h2
+{
+  color: #dbaa07;
+}
+.our-team .card-list .card-item .user-course
+{
+  color: #d0eb21;
 }

@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .forms import userForm
 
 
 def home(request):
@@ -30,14 +31,20 @@ def contact(request):
     }
     return render(request,"contact.html",data) 
 
+
 def login(request):
     data={
         'title': 'Login'
     }
     return render(request,"login.html",data) 
 
+
+
 def register(request):
-    data={
-        'title': 'Registraion'
-    }
-    return render(request,"signup.html",data) 
+    name = None
+    try:
+       name = request.POST['name']
+       print(name);
+    except:
+       pass
+    return render(request,'signup.html',{'value':name}) 

@@ -9,12 +9,10 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -26,7 +24,6 @@ SECRET_KEY = 'django-insecure-fik)7!an)gl1p*$d2_!h+02oc-v1i!vnw%=pe!bdhha3si56@7
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
