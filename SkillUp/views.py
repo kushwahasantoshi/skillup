@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 from .forms import userForm
 
@@ -41,10 +41,26 @@ def login(request):
 
 
 def register(request):
-    name = None
+    username = userForm()
+    fn = userForm()
+    data={'form':fn}
     try:
-       name = request.POST['name']
-       print(name);
+        if request.method=="POST":
+            if request.POST['name'] =="":
+                return render(request,'signup.html',{'error':True})
+        
+            name = request.POST['name']
+            contact = request.POST['contact']
+            mail = request.POST['email']
+            data={
+                'name':name,
+                'contact': contact,
+                'email': mail,
+                'form':fn
+            }
+            
+            return HttpResponseRedirect('/')
+   
     except:
-       pass
-    return render(request,'signup.html',{'value':name}) 
+       print(e)
+    return render(request,'signup.html',data) 
