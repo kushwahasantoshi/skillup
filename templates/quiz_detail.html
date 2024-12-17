@@ -1,0 +1,32 @@
+{% load static %}
+{% include "header.html"%}
+    <section classs="middle">
+        <div class="quiz-detail">
+            <div class="quiz-detail-inner">
+                <h1>{{ quiz.title }}</h1>
+                <form method="post" id="quizForm">
+                    {% csrf_token %}
+                    <ul>
+                        {% for question in quiz.questions_data %}
+                            <li>
+                                <p>{{ question.question }}</p>
+                                <ul>
+                                    {% for option in question.options %}
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="question{{ forloop.counter }}" value="{{ option.option_text }}">
+                                                {{ option.option_text }}
+                                            </label>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html"%} 

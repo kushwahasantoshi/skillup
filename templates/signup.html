@@ -5,22 +5,26 @@
 
 <div class="registration-form">
 	<h1 class="text-center">Registration Form</h1>
-    {% if error %}
-        <div class="">ERROR</div>
-    {% endif %}
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <form id="registrationForm" method="post" action="/">
+                        <form id="registrationForm" method="post">
+                            {% if error %}
+                                <div class="validation_alert" style="color:red">
+                                    <p><strong>Error!</strong> All Field is Required </p>
+                                </div>
+                            {% endif %}
+
                             {% csrf_token %}
+
                             <div class="row">
                                 <div class="col-md-12 mb-4">
                                   	<div data-mdb-input-init class="form-outline">
 										<label class="form-label" for="firstName">Name</label>
-                                        {{form.name}}
-                                    	{% comment %} <input type="text" id="name" name= "name" value="{{name}}" class="form-control form-control-lg" /> {% endcomment %}
+                                        {% comment %} {{form.name}} {% endcomment %}
+                                    	<input type="text" id="name" name= "name" value="{{name}}" class="form-control form-control-lg" />
                                   	</div>
                                 </div>
                             </div>
@@ -29,15 +33,15 @@
                                 <div class="col-md-6 mb-4 pb-2">
                                   	<div data-mdb-input-init class="form-outline">
                                     	<label class="form-label" for="emailAddress">Email</label>
-                                    	{{form.email}}
-                                        {% comment %} <input type="email" id="emailAddress"name="email"value="{{email}}" class="form-control form-control-lg" /> {% endcomment %}
+                                    	{% comment %} {{form.email}} {% endcomment %}
+                                        <input type="email" id="emailAddress"name="email"value="{{email}}" class="form-control form-control-lg" />
                                   	</div>
                                 </div>
                                 <div class="col-md-6 mb-4 pb-2">
                                   	<div data-mdb-input-init class="form-outline">
                                     	<label class="form-label" for="phoneNumber">Phone Number</label>
-                                    	{{form.contact}}
-                                        {% comment %} <input type="tel" id="phoneNumber"name="contact" value="{{contact}}"class="form-control form-control-lg" /> {% endcomment %}
+                                    	{% comment %} {{form.contact}} {% endcomment %}
+                                        <input type="tel" id="phoneNumber"name="contact" value="{{contact}}"class="form-control form-control-lg" />
                                   	</div>
                                 </div>
                             </div>
@@ -45,13 +49,23 @@
 							<div class="row">
 								<div class="col-12">
 									<label class="form-label select-label">Choose User Type</label>
-                                    {{form.user}}
-									{% comment %} <select class="select form-control-lg" style="width:100%">
+                                    {% comment %} {{form.user}} {% endcomment %}
+									<select class="select form-control-lg" style="width:100%">
 										<option value="1">Choose option</option>
 										<option value="2">Student</option>
 										<option value="3">Instructor</option>
-									</select> {% endcomment %}
+									</select>
 								</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                  	<div data-mdb-input-init class="form-outline">
+										<label class="form-label" for="password">Password</label>
+                                        {% comment %} {{form.password}} {% endcomment %}
+                                    	<input type="text" id="name" name= "name" value="{{name}}" class="form-control form-control-lg" />
+                                  	</div>
+                                </div>
                             </div>
                            
                             <div class="mt-4 pt-2">

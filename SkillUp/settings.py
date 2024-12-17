@@ -28,13 +28,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-     'skillup',
+    
+    'skillup',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'skillupapp'
 ]
 
 MIDDLEWARE = [
@@ -72,13 +74,14 @@ WSGI_APPLICATION = 'skillup.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': 
+        {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'skillup_db',
-        'USER' : 'santoshi',
-        'PASSWORD' : '1111',
-        'HOST': 'localhost',
+        'USER' : 'root',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
+        'PASSWORD' : '1111',
     }
 }
 
